@@ -1,0 +1,34 @@
+C:\Users\ugurk\documents\visual studio 2015\Projects\WindowsApplication3\WindowsApplication3\bin\Debug\WindowsApplication3.exe.config
+C:\Users\ugurk\documents\visual studio 2015\Projects\WindowsApplication3\WindowsApplication3\obj\Debug\WindowsApplication3.exe
+C:\Users\ugurk\documents\visual studio 2015\Projects\WindowsApplication3\WindowsApplication3\obj\Debug\WindowsApplication3.xml
+C:\Users\ugurk\documents\visual studio 2015\Projects\WindowsApplication3\WindowsApplication3\obj\Debug\WindowsApplication3.pdb
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\bin\Debug\WindowsApplication3.exe.config
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.exe
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.xml
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.pdb
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\bin\Debug\WindowsApplication3.exe
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\bin\Debug\WindowsApplication3.pdb
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\bin\Debug\WindowsApplication3.xml
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbprojResolveAssemblyReference.cache
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Ders.resources
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_AnaSayfa.resources
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Asistan.resources
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Derslik.resources
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Sınav.resources
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
+C:\Users\ugurk\Documents\Visual Studio 2015\Projects\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbproj.GenerateResource.Cache
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\bin\Debug\WindowsApplication3.exe.config
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.exe
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.xml
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.pdb
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\bin\Debug\WindowsApplication3.exe
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\bin\Debug\WindowsApplication3.pdb
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\bin\Debug\WindowsApplication3.xml
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbprojResolveAssemblyReference.cache
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Ders.resources
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_AnaSayfa.resources
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Asistan.resources
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Derslik.resources
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Sınav.resources
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
+C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbproj.GenerateResource.Cache
