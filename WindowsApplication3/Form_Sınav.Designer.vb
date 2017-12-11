@@ -22,34 +22,34 @@ Partial Class Form_Sınav
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button_SınavOlustur = New System.Windows.Forms.Button()
+        Me.btnSinavOlustur = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox_DersAdı = New System.Windows.Forms.ComboBox()
+        Me.cbDersAdi = New System.Windows.Forms.ComboBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button_OgrListeSec = New System.Windows.Forms.Button()
+        Me.btnListeYukle = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label_Kapasite = New System.Windows.Forms.Label()
-        Me.ComboBox_Sinif = New System.Windows.Forms.ComboBox()
-        Me.gb_Siniflar = New System.Windows.Forms.GroupBox()
+        Me.lblOgrenciSayisi = New System.Windows.Forms.Label()
+        Me.flSinifListele = New System.Windows.Forms.FlowLayoutPanel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
-        'Button_SınavOlustur
+        'btnSinavOlustur
         '
-        Me.Button_SınavOlustur.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button_SınavOlustur.Location = New System.Drawing.Point(95, 311)
-        Me.Button_SınavOlustur.Name = "Button_SınavOlustur"
-        Me.Button_SınavOlustur.Size = New System.Drawing.Size(170, 20)
-        Me.Button_SınavOlustur.TabIndex = 9
-        Me.Button_SınavOlustur.Text = "Sınav Oluştur"
-        Me.Button_SınavOlustur.UseVisualStyleBackColor = True
+        Me.btnSinavOlustur.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.btnSinavOlustur.Location = New System.Drawing.Point(95, 271)
+        Me.btnSinavOlustur.Name = "btnSinavOlustur"
+        Me.btnSinavOlustur.Size = New System.Drawing.Size(170, 20)
+        Me.btnSinavOlustur.TabIndex = 9
+        Me.btnSinavOlustur.Text = "Sınav Oluştur"
+        Me.btnSinavOlustur.UseVisualStyleBackColor = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label2.Location = New System.Drawing.Point(7, 290)
+        Me.Label2.Location = New System.Drawing.Point(7, 250)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(82, 13)
         Me.Label2.TabIndex = 7
@@ -65,84 +65,84 @@ Partial Class Form_Sınav
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Ders Adı :"
         '
-        'ComboBox_DersAdı
+        'cbDersAdi
         '
-        Me.ComboBox_DersAdı.FormattingEnabled = True
-        Me.ComboBox_DersAdı.Location = New System.Drawing.Point(93, 27)
-        Me.ComboBox_DersAdı.Name = "ComboBox_DersAdı"
-        Me.ComboBox_DersAdı.Size = New System.Drawing.Size(170, 21)
-        Me.ComboBox_DersAdı.TabIndex = 10
+        Me.cbDersAdi.FormattingEnabled = True
+        Me.cbDersAdi.Location = New System.Drawing.Point(93, 27)
+        Me.cbDersAdi.Name = "cbDersAdi"
+        Me.cbDersAdi.Size = New System.Drawing.Size(170, 21)
+        Me.cbDersAdi.TabIndex = 10
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Button_OgrListeSec
+        'btnListeYukle
         '
-        Me.Button_OgrListeSec.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button_OgrListeSec.Location = New System.Drawing.Point(95, 286)
-        Me.Button_OgrListeSec.Name = "Button_OgrListeSec"
-        Me.Button_OgrListeSec.Size = New System.Drawing.Size(170, 20)
-        Me.Button_OgrListeSec.TabIndex = 11
-        Me.Button_OgrListeSec.Text = "Liste Seç"
-        Me.Button_OgrListeSec.UseVisualStyleBackColor = True
+        Me.btnListeYukle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.btnListeYukle.Location = New System.Drawing.Point(95, 246)
+        Me.btnListeYukle.Name = "btnListeYukle"
+        Me.btnListeYukle.Size = New System.Drawing.Size(170, 20)
+        Me.btnListeYukle.TabIndex = 11
+        Me.btnListeYukle.Text = "Liste Seç"
+        Me.btnListeYukle.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(38, 356)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Brown
+        Me.Label3.Location = New System.Drawing.Point(38, 316)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(234, 13)
+        Me.Label3.Size = New System.Drawing.Size(0, 16)
         Me.Label3.TabIndex = 12
-        Me.Label3.Text = "BU FORMUN GELİŞTİRİLMESİ GEREKİYOR !!"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label4.Location = New System.Drawing.Point(36, 260)
+        Me.Label4.Location = New System.Drawing.Point(12, 220)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 13)
+        Me.Label4.Size = New System.Drawing.Size(77, 13)
         Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Kapasite:"
+        Me.Label4.Text = "Öğrenci Sayısı:"
         '
-        'Label_Kapasite
+        'lblOgrenciSayisi
         '
-        Me.Label_Kapasite.AutoSize = True
-        Me.Label_Kapasite.Location = New System.Drawing.Point(94, 260)
-        Me.Label_Kapasite.Name = "Label_Kapasite"
-        Me.Label_Kapasite.Size = New System.Drawing.Size(0, 13)
-        Me.Label_Kapasite.TabIndex = 13
+        Me.lblOgrenciSayisi.AutoSize = True
+        Me.lblOgrenciSayisi.Location = New System.Drawing.Point(94, 220)
+        Me.lblOgrenciSayisi.Name = "lblOgrenciSayisi"
+        Me.lblOgrenciSayisi.Size = New System.Drawing.Size(0, 13)
+        Me.lblOgrenciSayisi.TabIndex = 13
         '
-        'ComboBox_Sinif
+        'flSinifListele
         '
-        Me.ComboBox_Sinif.FormattingEnabled = True
-        Me.ComboBox_Sinif.Location = New System.Drawing.Point(93, 55)
-        Me.ComboBox_Sinif.Name = "ComboBox_Sinif"
-        Me.ComboBox_Sinif.Size = New System.Drawing.Size(170, 21)
-        Me.ComboBox_Sinif.TabIndex = 14
+        Me.flSinifListele.AutoScroll = True
+        Me.flSinifListele.Location = New System.Drawing.Point(37, 54)
+        Me.flSinifListele.Name = "flSinifListele"
+        Me.flSinifListele.Size = New System.Drawing.Size(226, 163)
+        Me.flSinifListele.TabIndex = 16
         '
-        'gb_Siniflar
+        'RichTextBox1
         '
-        Me.gb_Siniflar.Location = New System.Drawing.Point(26, 85)
-        Me.gb_Siniflar.Name = "gb_Siniflar"
-        Me.gb_Siniflar.Size = New System.Drawing.Size(292, 166)
-        Me.gb_Siniflar.TabIndex = 15
-        Me.gb_Siniflar.TabStop = False
-        Me.gb_Siniflar.Text = "GroupBox1"
+        Me.RichTextBox1.Location = New System.Drawing.Point(284, 27)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(255, 305)
+        Me.RichTextBox1.TabIndex = 17
+        Me.RichTextBox1.Text = ""
         '
         'Form_Sınav
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(410, 427)
-        Me.Controls.Add(Me.gb_Siniflar)
-        Me.Controls.Add(Me.ComboBox_Sinif)
-        Me.Controls.Add(Me.Label_Kapasite)
+        Me.ClientSize = New System.Drawing.Size(551, 633)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.flSinifListele)
+        Me.Controls.Add(Me.lblOgrenciSayisi)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Button_OgrListeSec)
-        Me.Controls.Add(Me.ComboBox_DersAdı)
-        Me.Controls.Add(Me.Button_SınavOlustur)
+        Me.Controls.Add(Me.btnListeYukle)
+        Me.Controls.Add(Me.cbDersAdi)
+        Me.Controls.Add(Me.btnSinavOlustur)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
@@ -153,15 +153,15 @@ Partial Class Form_Sınav
 
     End Sub
 
-    Friend WithEvents Button_SınavOlustur As Button
+    Friend WithEvents btnSinavOlustur As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox_DersAdı As ComboBox
+    Friend WithEvents cbDersAdi As ComboBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents Button_OgrListeSec As Button
+    Friend WithEvents btnListeYukle As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label_Kapasite As Label
-    Friend WithEvents ComboBox_Sinif As ComboBox
-    Friend WithEvents gb_Siniflar As GroupBox
+    Friend WithEvents lblOgrenciSayisi As Label
+    Friend WithEvents flSinifListele As FlowLayoutPanel
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class

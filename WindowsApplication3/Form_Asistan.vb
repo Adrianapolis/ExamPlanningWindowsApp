@@ -1,8 +1,8 @@
 ﻿Public Class Form_Asistan
-    Private Sub Button_AsistanEkle_Click(sender As Object, e As EventArgs) Handles Button_AsistanEkle.Click
+    Private Sub Button_AsistanEkle_Click(sender As Object, e As EventArgs) Handles btnAsistanEkle.Click
         Dim a As New Asistan()
-        a.AsistanAdi = TextBox_AsistanAdi.Text
-        a.Mail = TextBox_AsistanEmail.Text
+        a.AsistanAdi = tbAsistanAdi.Text
+        a.Mail = tbAsistanMail.Text
         database.AsistanEkle(a)
     End Sub
 End Class

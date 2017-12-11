@@ -23,10 +23,10 @@ Partial Class Form_Ders
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox_DersAdi = New System.Windows.Forms.TextBox()
+        Me.tbDersAdi = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox_DersKodu = New System.Windows.Forms.TextBox()
-        Me.Button_DersEkle = New System.Windows.Forms.Button()
+        Me.tbDersKodu = New System.Windows.Forms.TextBox()
+        Me.btnDersEkle = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -39,13 +39,13 @@ Partial Class Form_Ders
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ders Adı :"
         '
-        'TextBox_DersAdi
+        'tbDersAdi
         '
-        Me.TextBox_DersAdi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TextBox_DersAdi.Location = New System.Drawing.Point(91, 73)
-        Me.TextBox_DersAdi.Name = "TextBox_DersAdi"
-        Me.TextBox_DersAdi.Size = New System.Drawing.Size(170, 20)
-        Me.TextBox_DersAdi.TabIndex = 1
+        Me.tbDersAdi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.tbDersAdi.Location = New System.Drawing.Point(91, 73)
+        Me.tbDersAdi.Name = "tbDersAdi"
+        Me.tbDersAdi.Size = New System.Drawing.Size(170, 20)
+        Me.tbDersAdi.TabIndex = 1
         '
         'Label2
         '
@@ -57,33 +57,33 @@ Partial Class Form_Ders
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Ders Kodu :"
         '
-        'TextBox_DersKodu
+        'tbDersKodu
         '
-        Me.TextBox_DersKodu.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TextBox_DersKodu.Location = New System.Drawing.Point(91, 99)
-        Me.TextBox_DersKodu.Name = "TextBox_DersKodu"
-        Me.TextBox_DersKodu.Size = New System.Drawing.Size(170, 20)
-        Me.TextBox_DersKodu.TabIndex = 3
+        Me.tbDersKodu.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.tbDersKodu.Location = New System.Drawing.Point(91, 99)
+        Me.tbDersKodu.Name = "tbDersKodu"
+        Me.tbDersKodu.Size = New System.Drawing.Size(170, 20)
+        Me.tbDersKodu.TabIndex = 3
         '
-        'Button_DersEkle
+        'btnDersEkle
         '
-        Me.Button_DersEkle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button_DersEkle.Location = New System.Drawing.Point(91, 125)
-        Me.Button_DersEkle.Name = "Button_DersEkle"
-        Me.Button_DersEkle.Size = New System.Drawing.Size(170, 20)
-        Me.Button_DersEkle.TabIndex = 4
-        Me.Button_DersEkle.Text = "Ekle"
-        Me.Button_DersEkle.UseVisualStyleBackColor = True
+        Me.btnDersEkle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.btnDersEkle.Location = New System.Drawing.Point(91, 125)
+        Me.btnDersEkle.Name = "btnDersEkle"
+        Me.btnDersEkle.Size = New System.Drawing.Size(170, 20)
+        Me.btnDersEkle.TabIndex = 4
+        Me.btnDersEkle.Text = "Ekle"
+        Me.btnDersEkle.UseVisualStyleBackColor = True
         '
         'Form_Ders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.Button_DersEkle)
-        Me.Controls.Add(Me.TextBox_DersKodu)
+        Me.Controls.Add(Me.btnDersEkle)
+        Me.Controls.Add(Me.tbDersKodu)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox_DersAdi)
+        Me.Controls.Add(Me.tbDersAdi)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form_Ders"
         Me.Text = "Form_Ders"
@@ -93,8 +93,8 @@ Partial Class Form_Ders
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox_DersAdi As TextBox
+    Friend WithEvents tbDersAdi As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox_DersKodu As TextBox
-    Friend WithEvents Button_DersEkle As Button
+    Friend WithEvents tbDersKodu As TextBox
+    Friend WithEvents btnDersEkle As Button
 End Class
