@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GorselDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Asistan">
+    <Key>
+      <PropertyRef Name="AsistanID" />
+    </Key>
+    <Property Name="AsistanID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AsistanAdi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mail" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Dersler">
+    <Key>
+      <PropertyRef Name="DersKodu" />
+    </Key>
+    <Property Name="DersKodu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DersAdi" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Derslik">
+    <Key>
+      <PropertyRef Name="DerslikID" />
+    </Key>
+    <Property Name="DerslikID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DerslikAdi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Kapasite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Donem">
+    <Key>
+      <PropertyRef Name="DonemID" />
+    </Key>
+    <Property Name="DonemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DonemAdi" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Liste">
+    <Key>
+      <PropertyRef Name="ListeID" />
+    </Key>
+    <Property Name="ListeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SinavID" Type="int" Nullable="false" />
+    <Property Name="DerslikID" Type="int" Nullable="false" />
+    <Property Name="AsistanID" Type="int" Nullable="false" />
+    <Property Name="OgrString" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sinav">
+    <Key>
+      <PropertyRef Name="SinavID" />
+    </Key>
+    <Property Name="SinavID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DersKodu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonemID" Type="int" Nullable="false" />
+    <Property Name="YilID" Type="int" Nullable="false" />
+    <Property Name="SinavTuru" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Yillar">
+    <Key>
+      <PropertyRef Name="YilID" />
+    </Key>
+    <Property Name="YilID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yil" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Liste_Asistan">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Liste" Type="Self.Liste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="AsistanID" />
+      </Principal>
+      <Dependent Role="Liste">
+        <PropertyRef Name="AsistanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Liste_Derslik">
+    <End Role="Derslik" Type="Self.Derslik" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Liste" Type="Self.Liste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Derslik">
+        <PropertyRef Name="DerslikID" />
+      </Principal>
+      <Dependent Role="Liste">
+        <PropertyRef Name="DerslikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Liste_Sinav">
+    <End Role="Sinav" Type="Self.Sinav" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Liste" Type="Self.Liste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sinav">
+        <PropertyRef Name="SinavID" />
+      </Principal>
+      <Dependent Role="Liste">
+        <PropertyRef Name="SinavID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sinav_Donem">
+    <End Role="Donem" Type="Self.Donem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sinav" Type="Self.Sinav" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Donem">
+        <PropertyRef Name="DonemID" />
+      </Principal>
+      <Dependent Role="Sinav">
+        <PropertyRef Name="DonemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sinav_Sinav">
+    <End Role="Dersler" Type="Self.Dersler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sinav" Type="Self.Sinav" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dersler">
+        <PropertyRef Name="DersKodu" />
+      </Principal>
+      <Dependent Role="Sinav">
+        <PropertyRef Name="DersKodu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sinav_Yil">
+    <End Role="Yillar" Type="Self.Yillar" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sinav" Type="Self.Sinav" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Yillar">
+        <PropertyRef Name="YilID" />
+      </Principal>
+      <Dependent Role="Sinav">
+        <PropertyRef Name="YilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="GorselDBModelStoreContainer">
+    <EntitySet Name="Asistan" EntityType="Self.Asistan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dersler" EntityType="Self.Dersler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Derslik" EntityType="Self.Derslik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Donem" EntityType="Self.Donem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Liste" EntityType="Self.Liste" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sinav" EntityType="Self.Sinav" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yillar" EntityType="Self.Yillar" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Liste_Asistan" Association="Self.FK_Liste_Asistan">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="Liste" EntitySet="Liste" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Liste_Derslik" Association="Self.FK_Liste_Derslik">
+      <End Role="Derslik" EntitySet="Derslik" />
+      <End Role="Liste" EntitySet="Liste" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Liste_Sinav" Association="Self.FK_Liste_Sinav">
+      <End Role="Sinav" EntitySet="Sinav" />
+      <End Role="Liste" EntitySet="Liste" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sinav_Donem" Association="Self.FK_Sinav_Donem">
+      <End Role="Donem" EntitySet="Donem" />
+      <End Role="Sinav" EntitySet="Sinav" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sinav_Sinav" Association="Self.FK_Sinav_Sinav">
+      <End Role="Dersler" EntitySet="Dersler" />
+      <End Role="Sinav" EntitySet="Sinav" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sinav_Yil" Association="Self.FK_Sinav_Yil">
+      <End Role="Yillar" EntitySet="Yillar" />
+      <End Role="Sinav" EntitySet="Sinav" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

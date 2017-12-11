@@ -25,7 +25,7 @@ Partial Class Form_Asistan
         Me.Button_AsistanEkle = New System.Windows.Forms.Button()
         Me.TextBox_AsistanEmail = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox_AsistanAdı = New System.Windows.Forms.TextBox()
+        Me.TextBox_AsistanAdi = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -57,13 +57,13 @@ Partial Class Form_Asistan
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "E-Mail:"
         '
-        'TextBox_AsistanAdı
+        'TextBox_AsistanAdi
         '
-        Me.TextBox_AsistanAdı.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TextBox_AsistanAdı.Location = New System.Drawing.Point(92, 94)
-        Me.TextBox_AsistanAdı.Name = "TextBox_AsistanAdı"
-        Me.TextBox_AsistanAdı.Size = New System.Drawing.Size(170, 20)
-        Me.TextBox_AsistanAdı.TabIndex = 6
+        Me.TextBox_AsistanAdi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox_AsistanAdi.Location = New System.Drawing.Point(92, 94)
+        Me.TextBox_AsistanAdi.Name = "TextBox_AsistanAdi"
+        Me.TextBox_AsistanAdi.Size = New System.Drawing.Size(170, 20)
+        Me.TextBox_AsistanAdi.TabIndex = 6
         '
         'Label1
         '
@@ -83,7 +83,7 @@ Partial Class Form_Asistan
         Me.Controls.Add(Me.Button_AsistanEkle)
         Me.Controls.Add(Me.TextBox_AsistanEmail)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox_AsistanAdı)
+        Me.Controls.Add(Me.TextBox_AsistanAdi)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form_Asistan"
         Me.Text = "Form_Asistan"
@@ -95,6 +95,6 @@ Partial Class Form_Asistan
     Friend WithEvents Button_AsistanEkle As Button
     Friend WithEvents TextBox_AsistanEmail As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox_AsistanAdı As TextBox
+    Friend WithEvents TextBox_AsistanAdi As TextBox
     Friend WithEvents Label1 As Label
 End Class

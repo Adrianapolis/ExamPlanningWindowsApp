@@ -47,11 +47,22 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -73,6 +84,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="database.vb" />
     <Compile Include="Form_Ders.Designer.vb">
       <DependentUpon>Form_Ders.vb</DependentUpon>
     </Compile>
@@ -103,6 +115,51 @@
     </Compile>
     <Compile Include="Form_Sınav.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Asistan.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dersler.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Derslik.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Donem.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Liste.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sinav.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\veritabani.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>veritabani.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\veritabani.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>veritabani.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\veritabani.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>veritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Yillar.vb">
+      <DependentUpon>veritabani.tt</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -144,6 +201,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="Models\veritabani.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>veritabani.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\veritabani.edmx.diagram">
+      <DependentUpon>veritabani.edmx</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -154,6 +218,22 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\veritabani.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>veritabani.edmx</DependentUpon>
+      <LastGenOutput>veritabani.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\veritabani.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>veritabani.edmx</DependentUpon>
+      <LastGenOutput>veritabani.vb</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

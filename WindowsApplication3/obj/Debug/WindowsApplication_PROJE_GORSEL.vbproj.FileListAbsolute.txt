@@ -32,18 +32,22 @@ C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\D
 C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Sınav.resources
 C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
 C:\Users\Fatih\Desktop\WindowsApplication_PROJE_GORSEL\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbproj.GenerateResource.Cache
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\WindowsApplication3.exe.config
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.exe
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.xml
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.pdb
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\WindowsApplication3.exe
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\WindowsApplication3.pdb
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\WindowsApplication3.xml
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbprojResolveAssemblyReference.cache
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Ders.resources
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_AnaSayfa.resources
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Asistan.resources
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Derslik.resources
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Sınav.resources
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
-C:\Users\ANIL.DESKTOP-3L7SSRO\Documents\GitHub\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbproj.GenerateResource.Cache
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\WindowsApplication3.exe.config
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.exe
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.xml
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.pdb
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\WindowsApplication3.exe
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\WindowsApplication3.pdb
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\WindowsApplication3.xml
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\EntityFramework.dll
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\EntityFramework.SqlServer.dll
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\EntityFramework.xml
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\bin\Debug\EntityFramework.SqlServer.xml
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbprojResolveAssemblyReference.cache
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Ders.resources
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_AnaSayfa.resources
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Asistan.resources
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Derslik.resources
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Form_Sınav.resources
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
+E:\Visual Basic\ExamPlanningWindowsApp\WindowsApplication3\obj\Debug\WindowsApplication_PROJE_GORSEL.vbproj.GenerateResource.Cache
