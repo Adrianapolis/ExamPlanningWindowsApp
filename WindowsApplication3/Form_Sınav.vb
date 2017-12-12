@@ -29,6 +29,9 @@ Public Class Form_Sınav
 
     End Sub
     Dim kapasite As Integer
+    Dim yerlestirilenogrencisayisi As Integer = 0
+    Dim secilensinifsayi As Integer = 0
+    Dim listeolusturucu As String
     Private Sub Button_OgrListeSec_Click(sender As Object, e As EventArgs) Handles btnListeYukle.Click
         OgrenciListesiniOku()
     End Sub
@@ -54,21 +57,37 @@ Public Class Form_Sınav
 
     End Sub
     Private Sub cb_click(sender As Object, e As EventArgs)
-        Dim ulasilan As CheckBox = CType(sender, CheckBox)
-        Dim kap = database.DerslikKapasiteGetir(ulasilan.Name)
+        Dim ulasilanderslik As CheckBox = CType(sender, CheckBox)
+        Dim kap = database.DerslikKapasiteGetir(ulasilanderslik.Name)
 
-        If ulasilan.Checked And kapasite - kap >= 0 Then
-            kapasite -= kap
-        ElseIf ulasilan.Checked = False Then
-            kapasite += kap
+        If ulasilanderslik.Checked And yerlestirilenogrencisayisi < kapasite Then
+            yerlestirilenogrencisayisi = yerlestirilenogrencisayisi + kap
+            secilensinifsayi = secilensinifsayi + 1
+        ElseIf ulasilanderslik.Checked = False Then
+            yerlestirilenogrencisayisi = yerlestirilenogrencisayisi - kap
+            secilensinifsayi = secilensinifsayi - 1
+        ElseIf yerlestirilenogrencisayisi > kapasite Then
+            Label3.Text = "Yeteri Kadar Sınıf Seçildi"
+            ulasilanderslik.Checked = False
         Else
+            Label3.Text = "Sınıf Seçmek Gerekli"
+            ulasilanderslik.Checked = False
 
-            Label3.Text = "Kapasite aştı"
-            ulasilan.Checked = False
+            ' If ulasilanderslik.Checked And kapasite - kap >= 0 Then
+            'kapasite -= kap
+            'ElseIf ulasilanderslik.Checked = False Then
+            'kapasite += kap
+            ' Else
+
+            'Label3.Text = "Kapasite aştı"
+            'ulasilanderslik.Checked = False
         End If
+        lblsnfsyi.Text = secilensinifsayi
+        lblyrlssayi.Text = yerlestirilenogrencisayisi
         lblOgrenciSayisi.Text = kapasite.ToString()
-    End Sub
 
+
+    End Sub
 
 
 End Class
