@@ -1,9 +1,8 @@
 ﻿Public Class database
-    Shared vt As New GorselDBEntities2
+    Shared vt As New GorselDBEntities
     Public Shared Sub AsistanEkle(ByVal asistan As Asistan)
         vt.Asistan.Add(asistan)
         vt.SaveChanges()
-        'vt.Asistan.Select(Function(x) Char.ToLower(x.AsistanAdi(0)) = "e").ToList()
     End Sub
     Public Shared Function AsistanListesiAl()
         Return vt.Asistan.Select(Function(x) x.AsistanAdi).ToList()

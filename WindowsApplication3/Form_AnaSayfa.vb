@@ -66,6 +66,10 @@
     End Sub
 
     Private Sub Form_AnaSayfa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ListBox1.DataSource = database.AsistanListesiAl()
+        Try
+            ListBox1.DataSource = database.AsistanListesiAl()
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

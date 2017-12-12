@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="GorselDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="gorseldbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Asistan">
     <Key>
       <PropertyRef Name="AsistanID" />
@@ -60,16 +60,6 @@
     <NavigationProperty Name="Donem" Relationship="Self.FK_Sinav_Donem" FromRole="Sinav" ToRole="Donem" />
     <NavigationProperty Name="Liste" Relationship="Self.FK_Liste_Sinav" FromRole="Sinav" ToRole="Liste" />
     <NavigationProperty Name="Yillar" Relationship="Self.FK_Sinav_Yil" FromRole="Sinav" ToRole="Yillar" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Yillar">
     <Key>
@@ -163,14 +153,13 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="GorselDBEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="gorseldbEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Asistan" EntityType="Self.Asistan" />
     <EntitySet Name="Dersler" EntityType="Self.Dersler" />
     <EntitySet Name="Derslik" EntityType="Self.Derslik" />
     <EntitySet Name="Donem" EntityType="Self.Donem" />
     <EntitySet Name="Liste" EntityType="Self.Liste" />
     <EntitySet Name="Sinav" EntityType="Self.Sinav" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Yillar" EntityType="Self.Yillar" />
     <AssociationSet Name="FK_Liste_Asistan" Association="Self.FK_Liste_Asistan">
       <End Role="Asistan" EntitySet="Asistan" />
