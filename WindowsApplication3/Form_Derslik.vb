@@ -4,5 +4,7 @@
         eklencekderslik.DerslikAdi = tbDerslikAdi.Text
         eklencekderslik.Kapasite = Convert.ToInt32(tbDerslikKapasite.Text)
         database.DerslikEkle(eklencekderslik)
+        tbDerslikAdi.Clear()
+        tbDerslikKapasite.Clear()
     End Sub
 End Class

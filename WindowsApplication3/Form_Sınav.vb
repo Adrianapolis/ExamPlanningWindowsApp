@@ -7,6 +7,7 @@ Public Class Form_Sınav
         Dim oku As String 'satır satır okumak için kullanılan değişken
         Dim fs As FileStream 'dosyayı okumak için kullanılır
         Dim dosyaacici As New OpenFileDialog() 'windowsta dosya açmak için
+        Dim Ogrenciler As New List(Of String)
 
         If dosyaacici.ShowDialog = DialogResult.OK Then
             fs = New FileStream(dosyaacici.FileName, FileMode.Open)
@@ -15,6 +16,7 @@ Public Class Form_Sınav
             Do
                 oku = sr.ReadLine
                 sayac = sayac + 1
+                Ogrenciler.Add(oku)
 
                 Try
                     RichTextBox1.AppendText(oku + vbNewLine) 'ilk okurken boş geldiği için try içine alındı
@@ -36,7 +38,7 @@ Public Class Form_Sınav
     Private Sub Form_Sınav_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cbDersAdi.DataSource = database.DersAdiGetir()
         Dim siniflar As List(Of String) = database.DerslikGetir()
-        Dim x = 10, y As Integer = 20
+            Dim x = 10, y As Integer = 20
         For i As Integer = 0 To siniflar.Count - 1
             Dim cb As New CheckBox
             cb.Width = 80
@@ -50,6 +52,7 @@ Public Class Form_Sınav
                 x = 10
             End If
         Next
+
 
 
     End Sub
