@@ -42,10 +42,9 @@ Partial Class Form_Sınav
         'btnSinavOlustur
         '
         Me.btnSinavOlustur.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.btnSinavOlustur.Location = New System.Drawing.Point(134, 360)
-        Me.btnSinavOlustur.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSinavOlustur.Location = New System.Drawing.Point(100, 321)
         Me.btnSinavOlustur.Name = "btnSinavOlustur"
-        Me.btnSinavOlustur.Size = New System.Drawing.Size(227, 25)
+        Me.btnSinavOlustur.Size = New System.Drawing.Size(170, 20)
         Me.btnSinavOlustur.TabIndex = 9
         Me.btnSinavOlustur.Text = "Sınav Oluştur"
         Me.btnSinavOlustur.UseVisualStyleBackColor = True
@@ -54,10 +53,9 @@ Partial Class Form_Sınav
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label2.Location = New System.Drawing.Point(16, 334)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(12, 300)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(110, 17)
+        Me.Label2.Size = New System.Drawing.Size(82, 13)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Öğrenci Listesi :"
         '
@@ -65,20 +63,18 @@ Partial Class Form_Sınav
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label1.Location = New System.Drawing.Point(45, 37)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(34, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 17)
+        Me.Label1.Size = New System.Drawing.Size(53, 13)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Ders Adı :"
         '
         'cbDersAdi
         '
         Me.cbDersAdi.FormattingEnabled = True
-        Me.cbDersAdi.Location = New System.Drawing.Point(124, 33)
-        Me.cbDersAdi.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbDersAdi.Location = New System.Drawing.Point(93, 27)
         Me.cbDersAdi.Name = "cbDersAdi"
-        Me.cbDersAdi.Size = New System.Drawing.Size(225, 24)
+        Me.cbDersAdi.Size = New System.Drawing.Size(170, 21)
         Me.cbDersAdi.TabIndex = 10
         '
         'OpenFileDialog1
@@ -88,10 +84,9 @@ Partial Class Form_Sınav
         'btnListeYukle
         '
         Me.btnListeYukle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.btnListeYukle.Location = New System.Drawing.Point(134, 329)
-        Me.btnListeYukle.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnListeYukle.Location = New System.Drawing.Point(100, 296)
         Me.btnListeYukle.Name = "btnListeYukle"
-        Me.btnListeYukle.Size = New System.Drawing.Size(227, 25)
+        Me.btnListeYukle.Size = New System.Drawing.Size(170, 20)
         Me.btnListeYukle.TabIndex = 11
         Me.btnListeYukle.Text = "Liste Seç"
         Me.btnListeYukle.UseVisualStyleBackColor = True
@@ -100,63 +95,62 @@ Partial Class Form_Sınav
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label4.Location = New System.Drawing.Point(16, 271)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(12, 220)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(103, 17)
+        Me.Label4.Size = New System.Drawing.Size(77, 13)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Öğrenci Sayısı:"
         '
         'lblOgrenciSayisi
         '
         Me.lblOgrenciSayisi.AutoSize = True
-        Me.lblOgrenciSayisi.Location = New System.Drawing.Point(125, 271)
-        Me.lblOgrenciSayisi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblOgrenciSayisi.Location = New System.Drawing.Point(94, 220)
         Me.lblOgrenciSayisi.Name = "lblOgrenciSayisi"
-        Me.lblOgrenciSayisi.Size = New System.Drawing.Size(0, 17)
+        Me.lblOgrenciSayisi.Size = New System.Drawing.Size(0, 13)
         Me.lblOgrenciSayisi.TabIndex = 13
         '
         'flSinifListele
         '
         Me.flSinifListele.AutoScroll = True
-        Me.flSinifListele.Location = New System.Drawing.Point(49, 66)
-        Me.flSinifListele.Margin = New System.Windows.Forms.Padding(4)
+        Me.flSinifListele.Location = New System.Drawing.Point(37, 54)
         Me.flSinifListele.Name = "flSinifListele"
-        Me.flSinifListele.Size = New System.Drawing.Size(301, 201)
+        Me.flSinifListele.Size = New System.Drawing.Size(226, 163)
         Me.flSinifListele.TabIndex = 16
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(379, 33)
-        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.RichTextBox1.Location = New System.Drawing.Point(284, 27)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(339, 374)
+        Me.RichTextBox1.Size = New System.Drawing.Size(255, 305)
         Me.RichTextBox1.TabIndex = 17
         Me.RichTextBox1.Text = ""
         '
         'lblyrls
         '
         Me.lblyrls.AutoSize = True
-        Me.lblyrls.Location = New System.Drawing.Point(159, 272)
+        Me.lblyrls.Location = New System.Drawing.Point(12, 265)
+        Me.lblyrls.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblyrls.Name = "lblyrls"
-        Me.lblyrls.Size = New System.Drawing.Size(170, 17)
+        Me.lblyrls.Size = New System.Drawing.Size(125, 13)
         Me.lblyrls.TabIndex = 18
         Me.lblyrls.Text = "Yerletirilen Öğrenci Sayısı"
         '
         'lblyrlssayi
         '
         Me.lblyrlssayi.AutoSize = True
-        Me.lblyrlssayi.Location = New System.Drawing.Point(336, 271)
+        Me.lblyrlssayi.Location = New System.Drawing.Point(145, 264)
+        Me.lblyrlssayi.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblyrlssayi.Name = "lblyrlssayi"
-        Me.lblyrlssayi.Size = New System.Drawing.Size(0, 17)
+        Me.lblyrlssayi.Size = New System.Drawing.Size(0, 13)
         Me.lblyrlssayi.TabIndex = 19
         '
         'lblsnfsyi
         '
         Me.lblsnfsyi.AutoSize = True
-        Me.lblsnfsyi.Location = New System.Drawing.Point(178, 298)
+        Me.lblsnfsyi.Location = New System.Drawing.Point(112, 243)
+        Me.lblsnfsyi.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblsnfsyi.Name = "lblsnfsyi"
-        Me.lblsnfsyi.Size = New System.Drawing.Size(0, 17)
+        Me.lblsnfsyi.Size = New System.Drawing.Size(0, 13)
         Me.lblsnfsyi.TabIndex = 20
         '
         'Label3
@@ -164,27 +158,27 @@ Partial Class Form_Sınav
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Brown
-        Me.Label3.Location = New System.Drawing.Point(115, 449)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(86, 365)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 20)
+        Me.Label3.Size = New System.Drawing.Size(0, 16)
         Me.Label3.TabIndex = 12
         '
         'lblsclnsnfsayi
         '
         Me.lblsclnsnfsayi.AutoSize = True
-        Me.lblsclnsnfsayi.Location = New System.Drawing.Point(46, 298)
+        Me.lblsclnsnfsayi.Location = New System.Drawing.Point(12, 243)
+        Me.lblsclnsnfsayi.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblsclnsnfsayi.Name = "lblsclnsnfsayi"
         Me.lblsclnsnfsayi.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblsclnsnfsayi.Size = New System.Drawing.Size(126, 17)
+        Me.lblsclnsnfsayi.Size = New System.Drawing.Size(95, 13)
         Me.lblsclnsnfsayi.TabIndex = 21
         Me.lblsclnsnfsayi.Text = "Seçilen Sınıf Sayısı"
         '
         'Form_Sınav
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(735, 779)
+        Me.ClientSize = New System.Drawing.Size(551, 633)
         Me.Controls.Add(Me.lblsclnsnfsayi)
         Me.Controls.Add(Me.lblsnfsyi)
         Me.Controls.Add(Me.lblyrlssayi)
@@ -199,7 +193,6 @@ Partial Class Form_Sınav
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form_Sınav"
         Me.Text = "Form_Sınav"
         Me.ResumeLayout(False)
