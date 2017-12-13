@@ -60,6 +60,11 @@ Public Class Form_Sınav
 
     Private Sub cb_click(sender As Object, e As EventArgs)
         Dim ulasilanDerslik As CheckBox = CType(sender, CheckBox)
+        Dim a As New SinifListeleri
+
+        Dim text As String = CType(sender, CheckBox).Name
+        a.PSinifAdi = text
+
         Dim SecilenSiniflarinKapasitesi = database.DerslikKapasiteGetir(ulasilanDerslik.Name)
         If ogrenciSayisi <= 0 Then
             Label3.Text = "Lütfen ilk önce öğrenci listesini yükleyiniz"
@@ -99,6 +104,7 @@ Public Class Form_Sınav
         For i As Integer = 0 To seciliSiniflar.Count - 1
 
         Next
+
 
     End Sub
 End Class
