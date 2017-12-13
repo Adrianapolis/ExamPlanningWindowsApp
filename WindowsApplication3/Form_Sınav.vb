@@ -14,7 +14,7 @@ Public Class Form_Sınav
         Dim fs As FileStream 'dosyayı okumak için kullanılır
         Dim dosyaacici As New OpenFileDialog() 'windowsta dosya açmak için
         Dim Ogrenciler As New List(Of String)
-
+        dosyaacici.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*" 'yalnızca text dosyalarını açmak için
         If dosyaacici.ShowDialog = DialogResult.OK Then
             fs = New FileStream(dosyaacici.FileName, FileMode.Open)
             Dim sr As StreamReader = New StreamReader(fs, System.Text.Encoding.Default) 'fsten üretilmiş okumak için kullanılır
@@ -33,6 +33,7 @@ Public Class Form_Sınav
             ogrenciSayisi = sayac
             fs.Close()
             lblOgrenciSayisi.Text = ogrenciSayisi
+            Label5.Text = "Açılan Dosya - " + dosyaacici.FileName
         End If
 
     End Sub
