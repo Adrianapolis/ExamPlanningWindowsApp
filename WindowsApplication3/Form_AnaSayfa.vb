@@ -7,16 +7,16 @@
     Dim secim As String
 
 
-    Private Sub Button_Sinif_Click(sender As Object, e As EventArgs) Handles btnSinif.Click
+    Private Sub Button_Sinif_Click(sender As Object, e As EventArgs) Handles btnDerslik.Click
+        ListBox1.DataSource = database.DerslikGetir()
         Label1.Hide()
         GroupBox1.Visible = True
-        GroupBox1.Text = btnSinif.Text
-
-        secim = "sinif"
+        GroupBox1.Text = btnDerslik.Text
+        secim = "derslik"
     End Sub
 
     Private Sub Button_Asistan_Click(sender As Object, e As EventArgs) Handles btnAsistan.Click
-
+        ListBox1.DataSource = database.AsistanListesiAl()
         Label1.Hide()
         GroupBox1.Visible = True
         GroupBox1.Text = btnAsistan.Text
@@ -36,6 +36,7 @@
 
     Private Sub Button_Ders_Click(sender As Object, e As EventArgs) Handles btnDers.Click
 
+        ListBox1.DataSource = database.DersAdiGetir()
         Label1.Hide()
         GroupBox1.Visible = True
         GroupBox1.Text = btnDers.Text
@@ -52,7 +53,7 @@
             Case "sinav"
                 Dim MyForm As New Form_Sınav
                 MyForm.ShowDialog()
-            Case "sinif"
+            Case "derslik"
                 Dim MyForm As New Form_Derslik
                 MyForm.ShowDialog()
             Case "ders"
@@ -66,10 +67,10 @@
     End Sub
 
     Private Sub Form_AnaSayfa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            ListBox1.DataSource = database.AsistanListesiAl()
-        Catch ex As Exception
 
-        End Try
+    End Sub
+
+    Private Sub btnSil_Click(sender As Object, e As EventArgs) Handles btnSil.Click
+        '1AsistanSil()
     End Sub
 End Class

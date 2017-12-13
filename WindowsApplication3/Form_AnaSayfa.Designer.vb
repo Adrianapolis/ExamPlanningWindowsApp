@@ -22,7 +22,7 @@ Partial Class Form_AnaSayfa
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnSinif = New System.Windows.Forms.Button()
+        Me.btnDerslik = New System.Windows.Forms.Button()
         Me.btnAsistan = New System.Windows.Forms.Button()
         Me.btnSinav = New System.Windows.Forms.Button()
         Me.btnDers = New System.Windows.Forms.Button()
@@ -35,14 +35,14 @@ Partial Class Form_AnaSayfa
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnSinif
+        'btnDerslik
         '
-        Me.btnSinif.Location = New System.Drawing.Point(12, 12)
-        Me.btnSinif.Name = "btnSinif"
-        Me.btnSinif.Size = New System.Drawing.Size(101, 23)
-        Me.btnSinif.TabIndex = 0
-        Me.btnSinif.Text = "Sınıflar"
-        Me.btnSinif.UseVisualStyleBackColor = True
+        Me.btnDerslik.Location = New System.Drawing.Point(12, 12)
+        Me.btnDerslik.Name = "btnDerslik"
+        Me.btnDerslik.Size = New System.Drawing.Size(101, 23)
+        Me.btnDerslik.TabIndex = 0
+        Me.btnDerslik.Text = "Derslikler"
+        Me.btnDerslik.UseVisualStyleBackColor = True
         '
         'btnAsistan
         '
@@ -140,7 +140,7 @@ Partial Class Form_AnaSayfa
         Me.Controls.Add(Me.btnDers)
         Me.Controls.Add(Me.btnSinav)
         Me.Controls.Add(Me.btnAsistan)
-        Me.Controls.Add(Me.btnSinif)
+        Me.Controls.Add(Me.btnDerslik)
         Me.Name = "Form_AnaSayfa"
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
@@ -149,7 +149,7 @@ Partial Class Form_AnaSayfa
 
     End Sub
 
-    Friend WithEvents btnSinif As Button
+    Friend WithEvents btnDerslik As Button
     Friend WithEvents btnAsistan As Button
     Friend WithEvents btnSinav As Button
     Friend WithEvents btnDers As Button

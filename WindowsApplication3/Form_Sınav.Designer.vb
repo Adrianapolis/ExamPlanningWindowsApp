@@ -37,6 +37,7 @@ Partial Class Form_Sınav
         Me.lblsnfsyi = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblsclnsnfsayi = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnSinavOlustur
@@ -95,7 +96,7 @@ Partial Class Form_Sınav
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label4.Location = New System.Drawing.Point(12, 220)
+        Me.Label4.Location = New System.Drawing.Point(17, 220)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 13)
         Me.Label4.TabIndex = 5
@@ -131,9 +132,9 @@ Partial Class Form_Sınav
         Me.lblyrls.Location = New System.Drawing.Point(12, 265)
         Me.lblyrls.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblyrls.Name = "lblyrls"
-        Me.lblyrls.Size = New System.Drawing.Size(125, 13)
+        Me.lblyrls.Size = New System.Drawing.Size(130, 13)
         Me.lblyrls.TabIndex = 18
-        Me.lblyrls.Text = "Yerletirilen Öğrenci Sayısı"
+        Me.lblyrls.Text = "Yerleştirilen Öğrenci Sayısı"
         '
         'lblyrlssayi
         '
@@ -174,11 +175,22 @@ Partial Class Form_Sınav
         Me.lblsclnsnfsayi.TabIndex = 21
         Me.lblsclnsnfsayi.Text = "Seçilen Sınıf Sayısı"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Brown
+        Me.Label5.Location = New System.Drawing.Point(112, 416)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 16)
+        Me.Label5.TabIndex = 22
+        '
         'Form_Sınav
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(551, 633)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lblsclnsnfsayi)
         Me.Controls.Add(Me.lblsnfsyi)
         Me.Controls.Add(Me.lblyrlssayi)
@@ -215,4 +227,5 @@ Partial Class Form_Sınav
     Friend WithEvents lblsnfsyi As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblsclnsnfsayi As Label
+    Friend WithEvents Label5 As Label
 End Class
