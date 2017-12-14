@@ -8,6 +8,7 @@ Public Class Form_Sınav
     Dim secilenSinifsayi As Integer = 0
     Dim listeOlusturucu As String
     Dim seciliSiniflar As New List(Of String)
+    Dim seciliAsistanlar As New List(Of String)
     Dim Ogrenciler As New List(Of String)
     Shared random As New Random()
     Dim listeler As New List(Of SinifListeleri)
@@ -27,10 +28,10 @@ Public Class Form_Sınav
                 sayac = sayac + 1
                 Ogrenciler.Add(oku)
 
-                Try
-                    RichTextBox1.AppendText(oku + vbNewLine) 'ilk okurken boş geldiği için try içine alındı
-                Catch ex As Exception
-                End Try
+                'Try
+                '    RichTextBox1.AppendText(oku + vbNewLine) 'ilk okurken boş geldiği için try içine alındı
+                'Catch ex As Exception
+                'End Try
 
             Loop Until oku Is Nothing
             ogrenciSayisi = sayac
@@ -51,17 +52,35 @@ Public Class Form_Sınav
     Private Sub Form_Sınav_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cbDersAdi.DataSource = database.DersAdiGetir()
         Dim siniflar As List(Of String) = database.DerslikGetir()
+        Dim asistanlar As List(Of String) = database.AsistanListesiAl()
         For i As Integer = 0 To siniflar.Count - 1
-            Dim cb As New CheckBox
-            cb.Width = 80
-            cb.Text = siniflar(i).ToString() + "-" + database.DerslikKapasiteGetir(siniflar(i)).ToString()
-            cb.Name = siniflar(i).ToString()
-            AddHandler cb.Click, AddressOf cb_click
-            flSinifListele.Controls.Add(cb)
+            Dim cbSinif As New CheckBox
+            'cbSinif.Width = 80
+            cbSinif.Text = siniflar(i).ToString() + "-" + database.DerslikKapasiteGetir(siniflar(i)).ToString()
+            cbSinif.Name = siniflar(i).ToString()
+            AddHandler cbSinif.Click, AddressOf cbSinif_click
+            flSinifListele.Controls.Add(cbSinif)
+        Next
+        For i As Integer = 0 To asistanlar.Count - 1
+            Dim cbAsistan As New CheckBox
+            'cbAsistan.Width = 80
+            cbAsistan.Text = asistanlar(i).ToString()
+            cbAsistan.Name = siniflar(i).ToString()
+            AddHandler cbAsistan.Click, AddressOf cbAsistan_click
+            flAsistanlar.Controls.Add(cbAsistan)
         Next
     End Sub
 
-    Private Sub cb_click(sender As Object, e As EventArgs)
+    Private Sub cbAsistan_click(sender As Object, e As EventArgs)
+        Dim ulasilanAsistan As CheckBox = CType(sender, CheckBox)
+        If ulasilanAsistan.Checked Then
+            seciliAsistanlar.Add(ulasilanAsistan.Text)
+        ElseIf ulasilanAsistan.Checked = False Then
+            seciliAsistanlar.Remove(ulasilanAsistan.Text)
+        End If
+    End Sub
+
+    Private Sub cbSinif_click(sender As Object, e As EventArgs)
         Dim ulasilanDerslik As CheckBox = CType(sender, CheckBox)
 
         Dim SecilenSiniflarinKapasitesi = database.DerslikKapasiteGetir(ulasilanDerslik.Name)
@@ -114,9 +133,12 @@ Public Class Form_Sınav
         For i As Integer = 0 To seciliSiniflar.Count - 1
             Dim gecici As New SinifListeleri
             Dim ogrenciSayisi As Integer = Ogrenciler.Count - 1
-            gecici.PDersAdi = seciliSiniflar(i)
+            gecici.PSinifAdi = seciliSiniflar(i)
+            gecici.PDersAdi = cbDersAdi.SelectedItem.ToString()
             gecici.PSinifKapasite = database.DerslikKapasiteGetir(seciliSiniflar(i).ToString())
             gecici.PbosSira = database.DerslikKapasiteGetir(seciliSiniflar(i).ToString())
+            gecici.PSinavTur = cbSinavTuru.SelectedItem.ToString()
+            gecici.PTarih = System.DateTime.Today
             listeler.Add(gecici)
         Next
         'yaratılan liste objelerine öğrenciler atanıyor
@@ -133,6 +155,11 @@ Public Class Form_Sınav
                     End If
                 End If
             Next
+        Next
+        For i As Integer = 0 To seciliSiniflar.Count - 1
+            Dim asistanIndex As Integer = random.Next(seciliAsistanlar.Count)
+            listeler(i).PAsistanAdi = seciliAsistanlar(asistanIndex)
+            seciliAsistanlar.RemoveAt(asistanIndex)
         Next
 
 
