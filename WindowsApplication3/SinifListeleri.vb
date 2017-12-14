@@ -1,11 +1,14 @@
 ﻿Public Class SinifListeleri
     Dim SinifAdi As String
     Dim SinifKapasite As Integer
+    Dim bosSira As Integer
     Dim DersAdi As String
     Dim AsistanAdi As String
     Dim Tarih As Date
     Dim SinavTur As String
-    Dim Ogrenciler As List(Of String)
+    Dim Ogrenciler As New List(Of String)
+
+
 
     Public Property PSinifAdi() As String
         Get
@@ -21,6 +24,14 @@
         End Get
         Set(ByVal value As Integer)
             SinifKapasite = value
+        End Set
+    End Property
+    Public Property PbosSira() As Integer
+        Get
+            Return bosSira
+        End Get
+        Set(value As Integer)
+            bosSira = value
         End Set
     End Property
     Public Property PDersAdi() As String

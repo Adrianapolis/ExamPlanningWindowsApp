@@ -8,12 +8,15 @@ Public Class Form_Sınav
     Dim secilenSinifsayi As Integer = 0
     Dim listeOlusturucu As String
     Dim seciliSiniflar As New List(Of String)
+    Dim Ogrenciler As New List(Of String)
+    Shared random As New Random()
+    Dim listeler As New List(Of SinifListeleri)
+
     Private Sub OgrenciListesiniOku()
         Dim sayac As Integer = -1   'öğrenci okumak için
         Dim oku As String 'satır satır okumak için kullanılan değişken
         Dim fs As FileStream 'dosyayı okumak için kullanılır
         Dim dosyaacici As New OpenFileDialog() 'windowsta dosya açmak için
-        Dim Ogrenciler As New List(Of String)
         dosyaacici.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*" 'yalnızca text dosyalarını açmak için
         If dosyaacici.ShowDialog = DialogResult.OK Then
             fs = New FileStream(dosyaacici.FileName, FileMode.Open)
@@ -61,10 +64,6 @@ Public Class Form_Sınav
 
     Private Sub cb_click(sender As Object, e As EventArgs)
         Dim ulasilanDerslik As CheckBox = CType(sender, CheckBox)
-        Dim a As New SinifListeleri
-
-        Dim text As String = CType(sender, CheckBox).Name
-        a.PSinifAdi = text
 
         Dim SecilenSiniflarinKapasitesi = database.DerslikKapasiteGetir(ulasilanDerslik.Name)
         If ogrenciSayisi <= 0 Then
@@ -73,16 +72,20 @@ Public Class Form_Sınav
         Else
 
             If ulasilanDerslik.Checked And yerlestirilenOgrenciSayisi < ogrenciSayisi Then
+
                 yerlestirilenOgrenciSayisi = yerlestirilenOgrenciSayisi + SecilenSiniflarinKapasitesi
                 secilenSinifsayi = secilenSinifsayi + 1
-                Label3.Text = "Sınıf Seçmek Gerekli"
+                Label3.Text = "Yeteri kadar sınıf seçildi"
                 seciliSiniflar.Add(ulasilanDerslik.Name)
+
             ElseIf ulasilanDerslik.Checked = False Then
+
                 yerlestirilenOgrenciSayisi = yerlestirilenOgrenciSayisi - SecilenSiniflarinKapasitesi
                 secilenSinifsayi = secilenSinifsayi - 1
                 seciliSiniflar.Remove(ulasilanDerslik.Name)
+
             ElseIf yerlestirilenOgrenciSayisi > ogrenciSayisi Then
-                Label3.Text = "Yeteri Kadar Sınıf Seçildi"
+                Label3.Text = "Sınıf Seçmek Gerekli"
                 ulasilanDerslik.Checked = False
 
                 ' If ulasilanderslik.Checked And kapasite - kap >= 0 Then
@@ -102,8 +105,30 @@ Public Class Form_Sınav
     End Sub
 
     Private Sub btnSinavOlustur_Click(sender As Object, e As EventArgs) Handles btnSinavOlustur.Click
-        For i As Integer = 0 To seciliSiniflar.Count - 1
 
+        'gereği kadar Liste objesi yaratılıyor
+        For i As Integer = 0 To seciliSiniflar.Count - 1
+            Dim gecici As New SinifListeleri
+            Dim ogrenciSayisi As Integer = Ogrenciler.Count - 1
+            gecici.PDersAdi = seciliSiniflar(i)
+            gecici.PSinifKapasite = database.DerslikKapasiteGetir(seciliSiniflar(i).ToString())
+            gecici.PbosSira = database.DerslikKapasiteGetir(seciliSiniflar(i).ToString())
+            listeler.Add(gecici)
+        Next
+        'yaratılan liste objelerine öğrenciler atanıyor
+        For i As Integer = 0 To ((ogrenciSayisi / seciliSiniflar.Count) + seciliSiniflar.Count) 'iç içe 2 döngümüz olduğundan 60 veri 3 listeye 20 tekrarda yerleşeceği için tekrarı azaltmak adına bu işlem yapıldı
+            For j As Integer = 0 To seciliSiniflar.Count - 1
+                If listeler(j).PbosSira >= 0 Then
+                    Dim OgrenciIndex As Integer = random.Next(Ogrenciler.Count)
+                    If Ogrenciler.Count > 0 Then
+                        If listeler(j).PbosSira > 0 Then
+                            listeler(j).POgrenciler.Add(Ogrenciler(OgrenciIndex))
+                            listeler(j).PbosSira -= 1
+                            Ogrenciler.RemoveAt(OgrenciIndex)
+                        End If
+                    End If
+                End If
+            Next
         Next
 
 

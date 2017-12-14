@@ -117,22 +117,40 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Models\Asistan.vb">
-      <DependentUpon>vertabani.tt</DependentUpon>
+      <DependentUpon>localveritabani.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Dersler.vb">
-      <DependentUpon>vertabani.tt</DependentUpon>
+      <DependentUpon>localveritabani.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Derslik.vb">
-      <DependentUpon>vertabani.tt</DependentUpon>
+      <DependentUpon>localveritabani.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Donem.vb">
-      <DependentUpon>vertabani.tt</DependentUpon>
+      <DependentUpon>localveritabani.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Liste.vb">
-      <DependentUpon>vertabani.tt</DependentUpon>
+      <DependentUpon>localveritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\localveritabani.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>localveritabani.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\localveritabani.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>localveritabani.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\localveritabani.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>localveritabani.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Sinav.vb">
-      <DependentUpon>vertabani.tt</DependentUpon>
+      <DependentUpon>localveritabani.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.vb">
+      <DependentUpon>localveritabani.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vertabani.Context.vb">
       <AutoGen>True</AutoGen>
@@ -150,7 +168,7 @@
       <DependentUpon>vertabani.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Yillar.vb">
-      <DependentUpon>vertabani.tt</DependentUpon>
+      <DependentUpon>localveritabani.tt</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -197,6 +215,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>vertabani.Designer.vb</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Models\localveritabani.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>localveritabani.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\localveritabani.edmx.diagram">
+      <DependentUpon>localveritabani.edmx</DependentUpon>
+    </None>
     <None Include="Models\vertabani.edmx.diagram">
       <DependentUpon>vertabani.edmx</DependentUpon>
     </None>
@@ -216,6 +241,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Models\localveritabani.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>localveritabani.edmx</DependentUpon>
+      <LastGenOutput>localveritabani.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\localveritabani.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>localveritabani.edmx</DependentUpon>
+      <LastGenOutput>localveritabani.vb</LastGenOutput>
+    </Content>
     <Content Include="Models\vertabani.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>vertabani.edmx</DependentUpon>
