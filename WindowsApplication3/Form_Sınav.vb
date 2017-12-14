@@ -35,11 +35,15 @@ Public Class Form_Sınav
             Loop Until oku Is Nothing
             ogrenciSayisi = sayac
             fs.Close()
-            lblOgrenciSayisi.Text = ogrenciSayisi
-            Label5.Text = "Açılan Dosya - " + dosyaacici.FileName
+            'lblOgrenciSayisi.Text = ogrenciSayisi
+            lblOgrenciSayisi.Text = "Öğrenci Sayısı : " + ogrenciSayisi.ToString
+            lblError.Text = "Lütfen yukarıdan sınıf seçiniz."
+            lblAcilanDosya.Text = "Açılan Dosya - " + dosyaacici.FileName
         End If
+        'flSinifListele.l
 
     End Sub
+
     Private Sub Button_OgrListeSec_Click(sender As Object, e As EventArgs) Handles btnListeYukle.Click
         OgrenciListesiniOku()
     End Sub
@@ -54,20 +58,15 @@ Public Class Form_Sınav
             cb.Name = siniflar(i).ToString()
             AddHandler cb.Click, AddressOf cb_click
             flSinifListele.Controls.Add(cb)
-
         Next
-
-
-
     End Sub
-
 
     Private Sub cb_click(sender As Object, e As EventArgs)
         Dim ulasilanDerslik As CheckBox = CType(sender, CheckBox)
 
         Dim SecilenSiniflarinKapasitesi = database.DerslikKapasiteGetir(ulasilanDerslik.Name)
         If ogrenciSayisi <= 0 Then
-            Label3.Text = "Lütfen ilk önce öğrenci listesini yükleyiniz"
+            lblError.Text = "Lütfen ilk önce öğrenci listesini yükleyiniz"
             ulasilanDerslik.Checked = False
         Else
 
@@ -75,7 +74,7 @@ Public Class Form_Sınav
 
                 yerlestirilenOgrenciSayisi = yerlestirilenOgrenciSayisi + SecilenSiniflarinKapasitesi
                 secilenSinifsayi = secilenSinifsayi + 1
-                Label3.Text = "Yeteri kadar sınıf seçildi"
+                lblError.Text = "Yeteri kadar sınıf seçildi"
                 seciliSiniflar.Add(ulasilanDerslik.Name)
 
             ElseIf ulasilanDerslik.Checked = False Then
@@ -85,7 +84,7 @@ Public Class Form_Sınav
                 seciliSiniflar.Remove(ulasilanDerslik.Name)
 
             ElseIf yerlestirilenOgrenciSayisi > ogrenciSayisi Then
-                Label3.Text = "Sınıf Seçmek Gerekli"
+                lblError.Text = "Sınıf Seçmek Gerekli"
                 ulasilanDerslik.Checked = False
 
                 ' If ulasilanderslik.Checked And kapasite - kap >= 0 Then
@@ -97,9 +96,14 @@ Public Class Form_Sınav
                 'Label3.Text = "Kapasite aştı"
                 'ulasilanderslik.Checked = False
             End If
-            lblsnfsyi.Text = secilenSinifsayi
-            lblyrlssayi.Text = yerlestirilenOgrenciSayisi
-            lblOgrenciSayisi.Text = ogrenciSayisi.ToString()
+            'lblsnfsyi.Text = "Seçilen Sınıf Sayısı : " + secilenSinifsayi                    -----------\
+            'lblyrlssayi.Text = "Yerleştirilen Öğrenci Sayısı : " + yerlestirilenOgrenciSayisi------------> "lblsclnsnf" gibi labeller pek hoş değildi :)
+            'lblOgrenciSayisi1.Text = ogrenciSayisi.ToString()                                -----------/
+
+            lblYerlestirilen.Text = "Yerleştirilen Öğrenci Sayısı : " + yerlestirilenOgrenciSayisi.ToString
+            lblSecilenDerslikSayi.Text = "Seçilen Sınıf Sayısı : " + secilenSinifsayi.ToString
+            lblOgrenciSayisi.Text = "Öğrenci Sayısı : " + ogrenciSayisi.ToString
+
         End If
 
     End Sub
