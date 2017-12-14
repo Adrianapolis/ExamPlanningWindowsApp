@@ -116,9 +116,9 @@ Public Class Form_Sınav
             listeler.Add(gecici)
         Next
         'yaratılan liste objelerine öğrenciler atanıyor
-        For i As Integer = 0 To ((ogrenciSayisi / seciliSiniflar.Count) + seciliSiniflar.Count) 'iç içe 2 döngümüz olduğundan 60 veri 3 listeye 20 tekrarda yerleşeceği için tekrarı azaltmak adına bu işlem yapıldı
+        For i As Integer = 0 To ogrenciSayisi
             For j As Integer = 0 To seciliSiniflar.Count - 1
-                If listeler(j).PbosSira >= 0 Then
+                If listeler(j).PbosSira > 0 Then
                     Dim OgrenciIndex As Integer = random.Next(Ogrenciler.Count)
                     If Ogrenciler.Count > 0 Then
                         If listeler(j).PbosSira > 0 Then
