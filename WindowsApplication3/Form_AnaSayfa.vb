@@ -17,7 +17,6 @@
 
     Private Sub Button_Asistan_Click(sender As Object, e As EventArgs) Handles btnAsistan.Click
         ListBox1.DataSource = database.AsistanListesiAl()
-        DataGridView1.DataSource = database.AsistanListesiAl()
         Label1.Hide()
         GroupBox1.Visible = True
         GroupBox1.Text = btnAsistan.Text
